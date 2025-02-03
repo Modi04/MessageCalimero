@@ -11,8 +11,8 @@ cargo build --target wasm32-unknown-unknown --profile app-release
 
 mkdir -p res
 
-cp $TARGET/wasm32-unknown-unknown/app-release/only_peers.wasm ./res/
+cp $TARGET/wasm32-unknown-unknown/app-release/cal_lock.wasm ./res/
 
 if command -v wasm-opt > /dev/null; then
-  wasm-opt -Oz ./res/only_peers.wasm -o ./res/only_peers.wasm
+  wasm-opt -Oz ./res/cal_lock.wasm -o ./res/only_peers.wasm
 fi
